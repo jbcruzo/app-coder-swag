@@ -31,7 +31,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="119" id="r7m-Qi-4W5" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r7m-Qi-4W5" id="dn0-gV-Tnf">
+                                        <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r7m-Qi-4W5" id="dn0-gV-Tnf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -79,17 +79,17 @@
                     <navigationItem key="navigationItem" title="CODER SWAG" id="9wv-MA-2Ww"/>
                     <connections>
                         <outlet property="categoryTable" destination="oYC-QT-8LM" id="4l8-KR-4Gu"/>
-                        <segue destination="sn9-DF-AHs" kind="show" id="haZ-Mn-tQ4"/>
+                        <segue destination="sn9-DF-AHs" kind="show" identifier="ProductsVC" id="haZ-Mn-tQ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.60000000000002" y="-580.65967016491754"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="XHx-uH-M5d">
             <objects>
-                <viewController id="sn9-DF-AHs" sceneMemberID="viewController">
+                <viewController id="sn9-DF-AHs" customClass="ProductsVC" customModule="coder_swag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3A-0F-5QR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gNu-Wm-Rdy" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="gNu-Wm-Rdy" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="178" height="269"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -122,13 +122,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shirt01" translatesAutoresizingMaskIntoConstraints="NO" id="mkQ-1n-9jO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="178"/>
+                                                    <rect key="frame" x="5" y="5" width="173" height="178"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="178" id="BSL-M3-vVo"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of the great product" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yli-4W-FRL">
-                                                    <rect key="frame" x="0.0" y="184" width="178" height="48"/>
+                                                    <rect key="frame" x="10" y="189" width="168" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="0CI-tg-sj2"/>
                                                     </constraints>
@@ -137,7 +137,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$25" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJD-To-UjR">
-                                                    <rect key="frame" x="0.0" y="235" width="178" height="29"/>
+                                                    <rect key="frame" x="10" y="240" width="168" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="29" id="DiO-Nz-eW8"/>
                                                     </constraints>
@@ -149,16 +149,16 @@
                                         </view>
                                         <color key="backgroundColor" white="0.89876302083333337" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="yli-4W-FRL" firstAttribute="leading" secondItem="gNu-Wm-Rdy" secondAttribute="leading" id="1sV-Ti-buC"/>
-                                            <constraint firstItem="mkQ-1n-9jO" firstAttribute="top" secondItem="gNu-Wm-Rdy" secondAttribute="top" id="JWA-GB-dkk"/>
+                                            <constraint firstItem="yli-4W-FRL" firstAttribute="leading" secondItem="gNu-Wm-Rdy" secondAttribute="leading" constant="10" id="1sV-Ti-buC"/>
+                                            <constraint firstItem="mkQ-1n-9jO" firstAttribute="top" secondItem="gNu-Wm-Rdy" secondAttribute="top" constant="5" id="JWA-GB-dkk"/>
                                             <constraint firstItem="LJD-To-UjR" firstAttribute="top" secondItem="yli-4W-FRL" secondAttribute="bottom" constant="3" id="L6h-cq-RME"/>
                                             <constraint firstAttribute="trailing" secondItem="yli-4W-FRL" secondAttribute="trailing" id="XB9-KK-vzg"/>
                                             <constraint firstAttribute="trailing" secondItem="mkQ-1n-9jO" secondAttribute="trailing" id="Z1u-Cd-HUe"/>
                                             <constraint firstAttribute="trailing" secondItem="LJD-To-UjR" secondAttribute="trailing" id="eee-4t-dN8"/>
-                                            <constraint firstItem="LJD-To-UjR" firstAttribute="leading" secondItem="gNu-Wm-Rdy" secondAttribute="leading" id="idy-Kr-q9f"/>
+                                            <constraint firstItem="LJD-To-UjR" firstAttribute="leading" secondItem="gNu-Wm-Rdy" secondAttribute="leading" constant="10" id="idy-Kr-q9f"/>
                                             <constraint firstAttribute="bottom" secondItem="LJD-To-UjR" secondAttribute="bottom" constant="5" id="sMK-8N-jqy"/>
                                             <constraint firstItem="yli-4W-FRL" firstAttribute="top" secondItem="mkQ-1n-9jO" secondAttribute="bottom" constant="6" id="tyW-W9-swL"/>
-                                            <constraint firstItem="mkQ-1n-9jO" firstAttribute="leading" secondItem="gNu-Wm-Rdy" secondAttribute="leading" id="yYM-Vr-k1y"/>
+                                            <constraint firstItem="mkQ-1n-9jO" firstAttribute="leading" secondItem="gNu-Wm-Rdy" secondAttribute="leading" constant="5" id="yYM-Vr-k1y"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="productImage" destination="mkQ-1n-9jO" id="av9-rA-4us"/>
@@ -180,6 +180,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vR1-h4-PP2"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="uQn-ml-wPz" id="9Pq-FG-T7L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1B-zT-lUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
